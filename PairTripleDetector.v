@@ -14,6 +14,15 @@ module PairTripleDetector
   // Discussion Section Task
   // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   // Implement a pair/triple detector using explicit gate-level modeling.
+  
+  wire w;
+  wire x;
+  wire y;
+
+  or  ( w,   in0, in1 );
+  and ( x,   in0, in1 );
+  and ( y,   in2, w   );
+  or  ( out, x,   y   );
 
 endmodule
 
